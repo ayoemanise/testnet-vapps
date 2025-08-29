@@ -18,7 +18,7 @@ Decentralized Social Reputation (DSR) vApp
 
 ## Short Description
 DSR is a vApp that enables users to build **on-chain social reputation** with privacy preserved through the Soundness Layer.  
-Instead of storing the full history of user activities publicly, the system uses zk-proofs to verify social achievements (e.g., community contributions, event participation, or identity verification) **without exposing sensitive data**.
+Instead of storing the full history of user activities publicly, the system uses zk-proofs to verify social achievements (e.g., community contributions, event participation, or identity verification) **without exposing sensitive data**
 
 ## Technical Architecture
 - **Frontend**: A simple web app (Next.js/React) where users can log in with their wallet and manage their reputation badges.  
