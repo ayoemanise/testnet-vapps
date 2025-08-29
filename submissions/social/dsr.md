@@ -1,67 +1,49 @@
-# vApp Submission: [Your Project Name]
+# vApp Submission: DSR
 
 ## Verification
 ```yaml
-github_username: "your-username"
-discord_id: "123456789012345678"
-timestamp: "2025-01-15"
+github_username: "ayoemanise"
+discord_id: "911111087494144011"
+timestamp: "2025-08-26"
 ```
 
-## Developer
-- **Name**: Your Name
-- **GitHub**: @your-username
-- **Discord**: username#1234
-- **Experience**: Brief background
+---
+category: social
+github_username: ayoemanise
+discord_id: ezie#6699
+---
 
-## Project
+# Proposal Title
+Decentralized Social Reputation (DSR) vApp
 
-### Name & Category
-- **Project**: Your vApp Name
-- **Category**: identity/defi/social/gaming/infrastructure/other
+## Short Description
+DSR is a vApp that enables users to build **on-chain social reputation** with privacy preserved through the Soundness Layer.  
+Instead of storing the full history of user activities publicly, the system uses zk-proofs to verify social achievements (e.g., community contributions, event participation, or identity verification) **without exposing sensitive data**.
 
-### Description
-What problem does your vApp solve? What does it do?
+## Technical Architecture
+- **Frontend**: A simple web app (Next.js/React) where users can log in with their wallet and manage their reputation badges.  
+- **Backend**: API service (Node.js/Express) to receive user requests, generate proofs, and relay them to the Soundness Layer.  
+- **Proof Generation**:  
+  - User action → generates a zk-proof via Soundness CLI.  
+  - Proof is submitted to the Soundness Layer for validation.  
+- **Storage**: Reputation metadata (badge ID, hashed activity) is stored on IPFS/Arweave, while only proofs are recorded on-chain.  
+- **Workflow**:  
+  1. User logs in → selects an event/activity to verify  
+  2. System generates zk-proof → submits to Soundness Layer  
+  3. If valid, user receives a private reputation badge  
+  4. Badge can be shared publicly without revealing full activity details  
 
-### SL Integration  
-How will you use Soundness Layer? What specific SL features?
+## Development Timeline
+| Phase | Description | Duration |
+|-------|-------------|----------|
+| 1     | Architecture research & repo setup | 1 week |
+| 2     | Proof integration with Soundness Layer (CLI & API) | 2 weeks |
+| 3     | Frontend implementation (badge & reputation UI/UX) | 1 week |
+| 4     | Storage integration (IPFS/Arweave) + internal testing | 1 week |
+| 5     | Review, bug fixing, and finalization | 1 week |
+| **Total** |  | **6 weeks** |
 
-## Technical
-
-### Architecture
-High-level system design and approach
-
-### Stack
-- **Frontend**: React/Vue/etc
-- **Backend**: Rust/Node.js/Python/etc  
-- **Blockchain**: SL + others
-- **Storage**: Database/WALRUS/IPFS/etc
-
-### Features
-1. Core feature 1
-2. Core feature 2  
-3. Core feature 3
-
-## Timeline
-
-### PoC (2-4 weeks)
-- [ ] Basic functionality
-- [ ] SL integration
-- [ ] Simple UI
-
-### MVP (4-8 weeks)  
-- [ ] Full features
-- [ ] Production ready
-- [ ] User testing
-
-## Innovation
-What makes this unique? Why will people use it?
-
-## Contact
-Preferred contact method and where you'll share updates.
-
-
-**Checklist before submitting:**
-- [ ] All fields completed
-- [ ] GitHub username matches PR author  
-- [ ] SL integration explained
-- [ ] Timeline is realistic
+## Added Value
+- Builds trust in social communities with **proof-based reputation** instead of unverifiable claims.  
+- Preserves **user privacy** by storing only proofs, not raw activity data.  
+- Extensible to other use cases: DAO voting, event participation proofs, and decentralized identity (DID).  
